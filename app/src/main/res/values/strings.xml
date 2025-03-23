@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Water</string>
+    <string name="servo_position_90">Servo Position: 90</string>
+    <string name="flow_rate_0_l_min">Flow Rate: 0 L/min</string>
+</resources>

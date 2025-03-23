@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header -->
+        <View
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="67dp"
+            android:background="@drawable/gradient_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Water Management System"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/header" />
+
+        <!-- Speedometer -->
+        <com.github.anastr.speedviewlib.SpeedView
+            android:id="@+id/speedometer"
+            android:layout_width="226dp"
+            android:layout_height="210dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header" />
+
+        <!-- Live Flow -->
+        <TextView
+            android:id="@+id/live_flow_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Live Flow: 0.0 L/min"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/speedometer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp" />
+
+        <!-- Total Flow -->
+        <TextView
+            android:id="@+id/total_flow_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Flow: 0.0 L"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/live_flow_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Valve Position -->
+        <TextView
+            android:id="@+id/valve_position_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valve Position: 0°"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/total_flow_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Valve Control SeekBar -->
+
+        <!-- Tap Switch -->
+
+        <!-- Input for SSID -->
+
+        <!-- Input for Password -->
+
+
+        <!-- View Graph Button -->
+
+        <SeekBar
+            android:id="@+id/flow_control"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="56dp"
+            android:max="180"
+            android:progress="0"
+            android:progressDrawable="@drawable/seekbar_progress"
+            android:thumb="@drawable/seek_thumb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.36"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/valve_position_label" />
+
+        <Switch
+            android:id="@+id/tap_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="88dp"
+            android:minHeight="48dp"
+            android:text="Tap Status"
+            android:textSize="18sp"
+            android:thumb="@drawable/ic_thumb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.453"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/flow_control" />
+
+        <Button
+            android:id="@+id/view_graph_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="88dp"
+            android:drawableStart="@drawable/ic_graph"
+            android:drawablePadding="8dp"
+            android:text="View Usage Graph"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.433"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tap_switch" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
