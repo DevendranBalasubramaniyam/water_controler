@@ -75,5 +75,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 📧 Contact
 
-For questions or support, contact **yourname@example.com**.
+For questions or support, contact **www.deva095@gmail.com**.
 
